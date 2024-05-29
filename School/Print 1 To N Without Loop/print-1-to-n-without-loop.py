@@ -4,8 +4,14 @@ class Solution:
     #Complete this function
     def printNos(self,N):
         #Your code here
-        for i in range(1,N+1):
-            print(i,end=" ")
+        if N>0:
+            self.printNos(N-1)
+            print(N,end=" ")
+            
+            
+        
+        '''for i in range(1,N+1):
+            print(i,end=" ")'''
             
 
 
