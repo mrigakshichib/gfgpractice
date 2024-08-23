@@ -3,10 +3,18 @@ class Solution:
     
     # Note that the size of the array is n-1
     def missingNumber(self, n, arr):
-        sum=n*(n+1)//2
-        for i in range(n-1):
-            sum-=arr[i]
-        return sum
+        '''for i in range(len(arr)):
+            if i not in arr:    ---> inefficient check
+                return i
+        ''' 
+        
+        expected_sum = n*(n+1)//2
+        
+        actual_sum = sum(arr)
+        
+        missing_number = expected_sum - actual_sum
+        
+        return missing_number
         
         # code here
 
